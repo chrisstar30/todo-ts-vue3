@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import type { ITodo } from '../types/todo'
 
 export default defineComponent({
   name: 'TodoHeader',
@@ -17,7 +18,7 @@ export default defineComponent({
         alert('不得為空')
         return false
       }
-      const todo = {
+      const todo:ITodo = {
         id: Date.now(),
         tit: tit.value,
         isCompleted: false
